@@ -1,7 +1,7 @@
 {
   "name": "@mathrandom7910/pos",
   "version": "1.0.0",
-  "description": "Positional class",
+  "description": "Positional object",
   "main": "src/index.js",
   "scripts": {
     "test": "node test.js",
@@ -9,5 +9,14 @@
   },
   "keywords": [],
   "author": "mathrandom7910",
-  "license": "ISC"
+  "license": "MIT",
+  "types": "./src\\index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mathrandom7910/pos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mathrandom7910/pos/issues"
+  },
+  "homepage": "https://github.com/Mathrandom7910/pos#readme"
 }
