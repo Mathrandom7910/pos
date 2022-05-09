@@ -1,4 +1,10 @@
-export declare class Pos {
+export declare class PrimitivePos {
+    x: number;
+    y: number;
+    constructor(x?: number, y?: number);
+    normalize(): Pos;
+}
+export declare class Pos extends PrimitivePos {
     x: number;
     y: number;
     constructor(x?: number, y?: number);
@@ -32,4 +38,5 @@ export declare class Pos {
      * @returns Formatted version of the position.
      */
     toString(): string;
+    asPrimitive(): PrimitivePos;
 }

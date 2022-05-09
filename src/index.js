@@ -1,8 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Pos = void 0;
-class Pos {
+exports.Pos = exports.PrimitivePos = void 0;
+class PrimitivePos {
     constructor(x = 0, y = 0) {
+        this.x = x;
+        this.y = y;
+    } //do docs
+    normalize() {
+        return new Pos(this.x, this.y);
+    }
+}
+exports.PrimitivePos = PrimitivePos;
+class Pos extends PrimitivePos {
+    constructor(x = 0, y = 0) {
+        super(x, y);
         this.x = x;
         this.y = y;
     }
@@ -47,6 +58,9 @@ class Pos {
      */
     toString() {
         return `X: ${this.x} Y: ${this.y}`;
+    }
+    asPrimitive() {
+        return new PrimitivePos(this.x, this.y);
     }
 }
 exports.Pos = Pos;
