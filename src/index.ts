@@ -1,6 +1,16 @@
-export class Pos {
+export class PrimitivePos {
     constructor(public x = 0, public y = 0) {
 
+    }//do docs
+
+    normalize() {
+        return new Pos(this.x, this.y);
+    }
+}
+
+export class Pos extends PrimitivePos {
+    constructor(public x = 0, public y = 0) {
+        super(x, y);
     }
 
     /**
@@ -61,5 +71,9 @@ export class Pos {
 
     toString() {
         return `X: ${this.x} Y: ${this.y}`;
+    }
+
+    asPrimitive() {
+        return new PrimitivePos(this.x, this.y);
     }
 }
