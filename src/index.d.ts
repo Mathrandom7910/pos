@@ -2,6 +2,9 @@ export declare class PrimitivePos {
     x: number;
     y: number;
     constructor(x?: number, y?: number);
+    /**
+     * @returns A normal clone of the current position object, (non primitive).
+     */
     normalize(): Pos;
 }
 export declare class Pos extends PrimitivePos {
@@ -38,5 +41,8 @@ export declare class Pos extends PrimitivePos {
      * @returns Formatted version of the position.
      */
     toString(): string;
+    /**
+     * @returns A primitive clone of the current object.
+     */
     asPrimitive(): PrimitivePos;
 }

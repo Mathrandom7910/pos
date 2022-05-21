@@ -5,7 +5,10 @@ class PrimitivePos {
     constructor(x = 0, y = 0) {
         this.x = x;
         this.y = y;
-    } //do docs
+    }
+    /**
+     * @returns A normal clone of the current position object, (non primitive).
+     */
     normalize() {
         return new Pos(this.x, this.y);
     }
@@ -59,6 +62,9 @@ class Pos extends PrimitivePos {
     toString() {
         return `X: ${this.x} Y: ${this.y}`;
     }
+    /**
+     * @returns A primitive clone of the current object.
+     */
     asPrimitive() {
         return new PrimitivePos(this.x, this.y);
     }
