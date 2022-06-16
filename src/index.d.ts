@@ -45,4 +45,22 @@ export declare class Pos extends PrimitivePos {
      * @returns A primitive clone of the current object.
      */
     asPrimitive(): PrimitivePos;
+    /**
+     * Sets the x and y properties to the given position object's.
+     * @param pos The given position object.
+     * @returns The updated current position.
+     */
+    set(pos: Pos): this;
+    /**
+     * Gets distance between the two positional objects.
+     * @param pos Position to calculate distance to.
+     * @returns Distance calculated.
+     */
+    dist(pos: Pos): number;
+    /**
+     * Gets direction from the current object to the second object.
+     * @param pos Position to calculate direction to.
+     * @returns Direction (in radians) calculated.
+     */
+    dirTo(pos: Pos): number;
 }

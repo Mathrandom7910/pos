@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pos = exports.PrimitivePos = void 0;
+const mathplus_1 = require("@mathrandom7910/mathplus");
 class PrimitivePos {
     constructor(x = 0, y = 0) {
         this.x = x;
@@ -67,6 +68,32 @@ class Pos extends PrimitivePos {
      */
     asPrimitive() {
         return new PrimitivePos(this.x, this.y);
+    }
+    /**
+     * Sets the x and y properties to the given position object's.
+     * @param pos The given position object.
+     * @returns The updated current position.
+     */
+    set(pos) {
+        this.x = pos.x;
+        this.y = pos.y;
+        return this;
+    }
+    /**
+     * Gets distance between the two positional objects.
+     * @param pos Position to calculate distance to.
+     * @returns Distance calculated.
+     */
+    dist(pos) {
+        return (0, mathplus_1.getDistance)(this, pos);
+    }
+    /**
+     * Gets direction from the current object to the second object.
+     * @param pos Position to calculate direction to.
+     * @returns Direction (in radians) calculated.
+     */
+    dirTo(pos) {
+        return (0, mathplus_1.getAngle)(this, pos);
     }
 }
 exports.Pos = Pos;
