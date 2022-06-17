@@ -1,6 +1,6 @@
 {
   "name": "@mathrandom7910/pos",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Positional object",
   "main": "src/index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Mathrandom7910/pos/issues"
   },
-  "homepage": "https://github.com/Mathrandom7910/pos#readme"
+  "homepage": "https://github.com/Mathrandom7910/pos#readme",
+  "dependencies": {
+    "@mathrandom7910/mathplus": "^1.0.2"
+  }
 }

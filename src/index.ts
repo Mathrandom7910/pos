@@ -105,7 +105,7 @@ export class Pos extends PrimitivePos {
      * @returns Distance calculated.
      */
 
-    dist(pos: Pos) {
+    dist(pos: Pos): number {
         return getDistance(this, pos);
     }
 
@@ -117,5 +117,9 @@ export class Pos extends PrimitivePos {
 
     dirTo(pos: Pos) {
         return getAngle(this, pos);
+    }
+
+    equals(pos: Pos) {
+        return this.x == pos.x && this.y == pos.y;
     }
 }
